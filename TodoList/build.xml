@@ -5,19 +5,27 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="TodoList">
     <property environment="env"/>
-    <property name="junit.output.dir" value="junit"/>
+    <property name="junit.output.dir" value="lib"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="lib/Junit.jar"/>
-        <pathelement location="lib//org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        <pathelement location="../../../../.p2/pool/plugins/org.junit_4.13.0.v20200204-1500.jar"/>
+        <pathelement location="../../../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
     </path>
     <path id="TodoList.classpath">
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
+    <path id="run.test (1).classpath">
+        <path refid="TodoList.classpath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+    </path>
     <path id="run.TodoList.classpath">
+        <path refid="TodoList.classpath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+    </path>
+    <path id="run.ToDoListTest.classpath">
         <path refid="TodoList.classpath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
@@ -63,11 +71,17 @@
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
-
-
     </target>
-    <target depends="build-subprojects,build-project, ToDoListTest" name="build"/>
-    <target name="build-ToDoListTest">
+    <target name="test (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="ToDoListTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.test (1).classpath"/>
+        </junit>
+    </target>
+    <target name="TodoList">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -76,13 +90,23 @@
             <classpath refid="run.TodoList.classpath"/>
         </junit>
     </target>
-    <target depends="build-subprojects,build-project, junitreport" name="build"/>
-    <target name="build-junitreport">
+
+    <target depends="build-subprojects,build-project,build" name="build-ToDoListTest"/>
+
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="ToDoListTest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="run.ToDoListTest.classpath"/>
+        </junit>
+
+    <target depends="build-subprojects,build-project,build" name="junitreport"/>
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
-    </target>
+
 </project>
