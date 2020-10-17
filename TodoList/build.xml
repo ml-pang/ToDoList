@@ -63,8 +63,11 @@
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
+
+
     </target>
-    <target name="TodoListTest">
+    <target depends="build-subprojects,build-project, ToDoListTest" name="build"/>
+    <target name="build-ToDoListTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -73,7 +76,8 @@
             <classpath refid="run.TodoList.classpath"/>
         </junit>
     </target>
-    <target name="junitreport">
+    <target depends="build-subprojects,build-project, junitreport" name="build"/>
+    <target name="build-junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
