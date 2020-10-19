@@ -17,14 +17,6 @@
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-    <path id="run.test.classpath">
-        <path refid="TodoList.classpath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.TodoList.classpath">
-        <path refid="TodoList.classpath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
     <path id="run.ToDoListTest.classpath">
         <path refid="TodoList.classpath"/>
         <path refid="JUnit 4.libraryclasspath"/>
