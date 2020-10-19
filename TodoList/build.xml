@@ -17,7 +17,7 @@
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-    <path id="run.test (1).classpath">
+    <path id="run.test.classpath">
         <path refid="TodoList.classpath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
@@ -72,13 +72,13 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="test (1)">
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="ToDoListTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
-            <classpath refid="run.test (1).classpath"/>
+            <classpath refid="run.test.classpath"/>
         </junit>
     </target>
     <target name="TodoList">

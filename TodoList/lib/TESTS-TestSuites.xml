@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="LAPTOP-AMHNQFLJ" id="0" name="ToDoListTest" package="" skipped="0" tests="4" time="0.123" timestamp="2020-10-17T16:26:08">
+  <testsuite errors="0" failures="0" hostname="LAPTOP-AMHNQFLJ" id="0" name="ToDoListTest" package="" skipped="0" tests="4" time="0.136" timestamp="2020-10-19T11:45:29">
       <properties>
           <property name="ant.library.dir" value="C:\Users\PML\.p2\pool\plugins\org.apache.ant_1.10.8.v20200515-1239\lib" />
 
           <property name="env.NUMBER_OF_PROCESSORS" value="4" />
 
-          <property name="env.USERPROFILE" value="C:\Users\PML" />
-
           <property name="java.specification.version" value="14" />
+
+          <property name="env.USERPROFILE" value="C:\Users\PML" />
 
           <property name="ant.project.name" value="TodoList" />
 
@@ -20,8 +20,6 @@
 
           <property name="debuglevel" value="source,lines,vars" />
 
-          <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
-
           <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
 
           <property name="java.vendor.url" value="https://java.oracle.com/" />
@@ -30,7 +28,7 @@
 
           <property name="sun.boot.library.path" value="C:\Users\PML\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932\jre\bin" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ToDoListTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\PML\git\Ind\repository\TodoList\lib\TEST-ToDoListTest.xml crashfile=C:\Users\PML\git\Ind\repository\TodoList\junitvmwatcher14845003751530944928.properties propsfile=C:\Users\PML\git\Ind\repository\TodoList\junit12916251954304250391.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ToDoListTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\PML\git\Ind\repository\TodoList\lib\TEST-ToDoListTest.xml crashfile=C:\Users\PML\git\Ind\repository\TodoList\junitvmwatcher14214663677826998008.properties propsfile=C:\Users\PML\git\Ind\repository\TodoList\junit5043202153302248728.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -50,9 +48,9 @@
 
           <property name="env.ProgramFiles" value="C:\Program Files" />
 
-          <property name="ant.file.TodoList" value="C:\Users\PML\git\Ind\repository\TodoList\build.xml" />
-
           <property name="java.vm.compressedOopsMode" value="32-bit" />
+
+          <property name="ant.file.TodoList" value="C:\Users\PML\git\Ind\repository\TodoList\build.xml" />
 
           <property name="env.Classpath" value="C:\LINGO17\Lingo17.jar" />
 
@@ -72,9 +70,9 @@
 
           <property name="env.PROCESSOR_REVISION" value="4e03" />
 
-          <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\" />
-
           <property name="user.script" value="" />
+
+          <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\PowerShell\Modules\" />
 
           <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
 
@@ -98,13 +96,13 @@
 
           <property name="env.HOMEPATH" value="\Users\PML" />
 
-          <property name="env.APPDATA" value="C:\Users\PML\AppData\Roaming" />
-
           <property name="env.SystemDrive" value="C:" />
 
-          <property name="env.ProgramData" value="C:\ProgramData" />
+          <property name="env.APPDATA" value="C:\Users\PML\AppData\Roaming" />
 
           <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
+
+          <property name="env.ProgramData" value="C:\ProgramData" />
 
           <property name="java.io.tmpdir" value="C:\Users\PML\AppData\Local\Temp\" />
 
@@ -158,9 +156,9 @@
 
           <property name="os.name" value="Windows 10" />
 
-          <property name="sun.java.launcher" value="SUN_STANDARD" />
-
           <property name="user.country" value="US" />
+
+          <property name="sun.java.launcher" value="SUN_STANDARD" />
 
           <property name="env.RCAUTOPLAY" value="C:\Program Files (x86)\Roxio 2010\OEM\Roxio Central 5\" />
 
@@ -174,9 +172,9 @@
 
           <property name="env.LINGO_17_HOME" value="C:\LINGO17\" />
 
-          <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
-
           <property name="ant.java.version" value="14" />
+
+          <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
 
           <property name="env.SESSIONNAME" value="Console" />
 
@@ -218,8 +216,6 @@
 
           <property name="java.vm.version" value="14.0.2+12-46" />
 
-          <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
-
           <property name="env.TEMP" value="C:\Users\PML\AppData\Local\Temp" />
 
           <property name="java.class.version" value="58.0" />
@@ -230,7 +226,7 @@
 
       </properties>
 
-      <testcase classname="ToDoListTest" name="testAddTask" time="0.004" />
+      <testcase classname="ToDoListTest" name="testAddTask" time="0.005" />
 
       <testcase classname="ToDoListTest" name="testGetCompletedTasks" time="0.0" />
 
