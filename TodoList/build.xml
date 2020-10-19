@@ -6,7 +6,8 @@
               as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="TodoList">
     <property environment="env"/>
-    <property name="junit.output.dir" value="junit"/>
+	<property name="ECLIPSE_HOME" value="../../../eclipse/jee-2020-03/eclipse/"/>
+	<property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
